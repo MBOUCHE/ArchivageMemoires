@@ -1,0 +1,23 @@
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDMYcEukZi0p80lDQBVEWzdYKL6qAn-X7k",
+    authDomain: "gestarmem.firebaseapp.com",
+    databaseURL: "https://gestarmem.firebaseio.com",
+    projectId: "gestarmem",
+    storageBucket: "gestarmem.appspot.com",
+    messagingSenderId: "100367105686"
+  };
+  firebase.initializeApp(config);
+
+  var bigOne = document.getElementById('bigOne');
+  var dbRef = firebase.database().ref().child('text');
+  dbRef.on('value', snap => bigOne.innerText = snap.val());
+
+</script>
+
+<script type="text/javascript">
+    var email = document.getElementById("Email").value;
+    var password = document.getElementById("Password").value;
+</script>
